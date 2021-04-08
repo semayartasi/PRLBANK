@@ -1,7 +1,7 @@
 package com.prlbank.stepdefinitions;
 
-import com.prlbank.pages.PRLHomePage;
-import com.prlbank.pages.PRLSignInPage;
+import com.prlbank.pages.HomePage;
+import com.prlbank.pages.SignInPage;
 import com.prlbank.utilities.ConfigurationReader;
 import com.prlbank.utilities.Driver;
 
@@ -11,8 +11,8 @@ import org.junit.Assert;
 
 public class US004StepDefinitions {
 
-    PRLHomePage homePage = new PRLHomePage();
-    PRLSignInPage signInPage = new PRLSignInPage();
+    HomePage homePage = new HomePage();
+    SignInPage signInPage = new SignInPage();
 
     @And("User navigates to Sign In Page")
     public void userNavigatesToSignInPage() {

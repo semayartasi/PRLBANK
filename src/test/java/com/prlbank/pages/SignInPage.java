@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PRLSignInPage {
+public class SignInPage {
 
-    public PRLSignInPage(){
+    public SignInPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -23,4 +23,11 @@ public class PRLSignInPage {
 
     @FindBy(xpath = "//*[text()='My Operations']")
     public WebElement loginConfirm;
+
+    @FindBy(xpath = "//li[@id='account-menu'] ")
+    public WebElement employeeDD;
+
+    @FindBy(xpath = "//*[text()='User Info']")
+    public WebElement UserInfo;
+
 }
