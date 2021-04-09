@@ -23,4 +23,11 @@ public class PRLSignInPage {
 
     @FindBy(xpath = "//*[text()='My Operations']")
     public WebElement loginConfirm;
+
+    @FindBy(xpath = "//li[@id='account-menu'] ")
+    public WebElement employeeDD;
+
+    @FindBy(xpath = "//*[text()='User Info']")
+    public WebElement UserInfo;
+
 }
