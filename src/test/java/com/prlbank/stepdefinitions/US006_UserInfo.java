@@ -1,8 +1,8 @@
 package com.prlbank.stepdefinitions;
 
-import com.prlbank.pages.HomePage;
-import com.prlbank.pages.SignInPage;
-import com.prlbank.pages.UserSettingsPage;
+import com.prlbank.pages.PRLHomePage;
+import com.prlbank.pages.PRLSignInPage;
+import com.prlbank.pages.PRLUserSettingsPage;
 import com.prlbank.utilities.ConfigurationReader;
 import com.prlbank.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -10,9 +10,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class US006_UserInfo {
-    HomePage homePage = new HomePage();
-    SignInPage signInPage = new SignInPage();
-    UserSettingsPage userSettingsPage = new UserSettingsPage();
+    PRLHomePage homePage = new PRLHomePage();
+    PRLSignInPage signInPage = new PRLSignInPage();
+    PRLUserSettingsPage userSettingsPage = new PRLUserSettingsPage();
 
     @Given("user is on main page")
     public void userIsOnMainPage() {

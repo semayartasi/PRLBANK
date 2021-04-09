@@ -18,23 +18,27 @@ Feature: User info segment (User Settings) should be editable on Homepage
     Scenario: User can update their first name
       Given user clicks on first name textbox
       When user updates "firstname"
-      Then user clicks save button
-      Then user can see the aprroved message
-
-    Scenario: User can update their last name
       Given user clicks on last name textbox
       When user updates "lastname"
-      Then user clicks save button
-      Then user can see the aprroved message
-
-    Scenario: User can update their email address
       Given user clicks on email textbox
       When user updates "email"
-      Then user clicks save button
-      Then user can see the aprroved message
-
-    Scenario: User can update their first name
       Given user clicks on language textbox
       When user clicks Turkce
       Then user clicks save button
       Then user can see the aprroved message
+
+#    Scenario: User can update their last name
+#
+#      Then user clicks save button
+#      Then user can see the aprroved message
+#
+#    Scenario: User can update their email address
+#
+#      Then user clicks save button
+#      Then user can see the aprroved message
+#
+#    Scenario: User can update their first name
+#      Given user clicks on language textbox
+#      When user clicks Turkce
+#      Then user clicks save button
+#      Then user can see the aprroved message

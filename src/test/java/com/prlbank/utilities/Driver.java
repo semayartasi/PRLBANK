@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
@@ -160,5 +161,20 @@ public class Driver {
             }
         }
 
+    }
+
+    public static void selectByVisibleText(WebElement element, String text){
+        Select objSelect =new Select(element);
+        objSelect.selectByVisibleText(text);
+    }
+    public static void selectByIndex(WebElement element, int index){
+        Select objSelect =new Select(element);
+        objSelect.selectByIndex(index);
+    }
+    public static void selectByValue(WebElement element, String value) {
+        Select objSelect = new Select(element);
+        List<WebElement> elementCount = objSelect.getOptions();
+        objSelect.selectByValue(value);
+        System.out.println("number of elements: "+elementCount.size());
     }
 }

@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SignInPage {
+public class PRLSignInPage {
 
-    public SignInPage(){
+    public PRLSignInPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
