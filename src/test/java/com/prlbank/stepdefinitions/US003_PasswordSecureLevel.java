@@ -28,7 +28,7 @@ public class US003_PasswordSecureLevel {
     @Then("user clicks on register button")
     public void user_clicks_on_register_button() {
         Driver.wait(1);
-        homePage.registerBtn.click();
+        homePage.registerButton.click();
 
 
     }
