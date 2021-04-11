@@ -15,8 +15,3 @@
 #      Given all api data is set to  using api end point
 #
 #    Scenario:
-#
-#
-#
-##  cucumber benefits: saving time and money
-##  with ready methods and our undefined steps also with scenarors we can organize
