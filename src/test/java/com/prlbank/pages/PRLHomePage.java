@@ -24,9 +24,8 @@ public class PRLHomePage {
     @FindBy(xpath = "//*[text()='Sign in'][1]")
     public WebElement SignInBtn;
 
-    @FindBy(xpath = "//*[@role='menuitem'][2]")
-    public WebElement registerBtn;
-
+    @FindBy(xpath = "//*[text()='Register']")
+    public WebElement registerButton;
 
 
 }

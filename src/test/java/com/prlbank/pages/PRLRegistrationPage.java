@@ -41,6 +41,7 @@ public class PRLRegistrationPage {
     @FindBy(id= "register-submit")
     public WebElement registerButton;
 
+
     @FindBy(xpath= "//*[@id='strengthBar']/li[1][@style='background-color: rgb(255, 0, 0);']")
     public WebElement first_strengthBar;
 
@@ -56,21 +57,17 @@ public class PRLRegistrationPage {
     @FindBy(xpath= "[@id='strengthBar']/li[5][@style='background-color: rgb(221, 221, 221);']")
     public WebElement fifth_strengthBar;
 
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div")
+    public WebElement alert;
 
+    @FindBy(xpath="//div[text()='This field is invalid']")
+    public WebElement emailIsNotValidMessage;
 
+    @FindBy(xpath="//div[text()='Your SSN is invalid']")
+    public WebElement SSNIsNotValidMessage;
 
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath="//div[text()='Your mobile phone number is invalid']")
+    public WebElement MobilePhoneIsNotValidMessage;
 
 
 
