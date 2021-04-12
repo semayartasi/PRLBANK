@@ -22,4 +22,8 @@ public class PRLHomePage {
 //    public WebElement iconMenu;
 
 
+    @FindBy(xpath = "//*[text()='Register']")
+    public WebElement registerButton;
+
+
 }
