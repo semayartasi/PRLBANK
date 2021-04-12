@@ -4,6 +4,8 @@ import com.prlbank.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+import java.util.List;
 
 public class PRLCreateOrEditAnAccountPage {
 
@@ -38,14 +40,23 @@ public class PRLCreateOrEditAnAccountPage {
     @FindBy (id="cancel-save")
     public WebElement backArrowButton;
 
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public List<WebElement> invalidFeedback;
 
+    public void selectAccountType(String type) {
+        Select accountTypeDropdown = new Select(multiSelectDDAccountType);
+        accountTypeDropdown.selectByVisibleText(type);
+    }
 
-
-
-
-
-
-
+    public void selectAccountStatusType(String type) {
+        Select accountStatusTypeDropdown = new Select(multiSelectDDAccountStatusType);
+        accountStatusTypeDropdown.selectByVisibleText(type);
+    }
+    public List<WebElement> selectEmployee() {
+        Select selectAnEmployee = new Select(multiSelectDDAccountType);
+        List<WebElement> employeeList = selectAnEmployee.getAllSelectedOptions();
+        return employeeList;
+    }
 
 
 }
