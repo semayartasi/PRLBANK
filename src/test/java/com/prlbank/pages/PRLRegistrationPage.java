@@ -41,8 +41,8 @@ public class PRLRegistrationPage {
     @FindBy(id= "register-submit")
     public WebElement registerButton;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div")
-    public WebElement alert;
+    @FindBy(xpath = "//*[contains(text(),'Registration saved!')]")
+    public WebElement approvalAlert;
 
     @FindBy(xpath="//div[text()='This field is invalid']")
     public WebElement emailIsNotValidMessage;

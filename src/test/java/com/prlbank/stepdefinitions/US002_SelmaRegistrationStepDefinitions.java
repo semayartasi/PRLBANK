@@ -2,6 +2,7 @@ package com.prlbank.stepdefinitions;
 
 import com.prlbank.pages.PRLHomePage;
 import com.prlbank.pages.PRLRegistrationPage;
+import com.prlbank.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -19,7 +20,7 @@ public class US002_SelmaRegistrationStepDefinitions {
 
     @When("user clicks on SSN text box and provide an SSN number")
     public void user_clicks_on_ssn_text_box_and_provide_an_ssn_number() {
-        prlRegistrationPage.SSNTextBox.sendKeys("679-45-2345");
+        prlRegistrationPage.SSNTextBox.sendKeys("676-08-9262");
     }
 
     @Then("user clicks on first name text box and provide a first name")
@@ -69,9 +70,10 @@ public class US002_SelmaRegistrationStepDefinitions {
 
     @Then("user should see the approval message")
     public void user_should_see_the_approval_message() {
-        String alertText=prlRegistrationPage.alert.getText();
-        Assert.assertEquals("Registration fail", " Please check your email for confirmation.", alertText);
-
+        Driver.wait(1);
+        String alertText=prlRegistrationPage.approvalAlert.getText();
+        System.out.println(alertText);
+        Assert.assertEquals("Registration fail", "Registration saved!", alertText);
     }
 
     @Then("user leaves new password confirmation text box blanked")
