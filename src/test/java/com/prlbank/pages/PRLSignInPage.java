@@ -30,4 +30,13 @@ public class PRLSignInPage {
     @FindBy(xpath = "//*[text()='User Info']")
     public WebElement UserInfo;
 
+    @FindBy(xpath = "//a[@href='/account/reset/request']")
+    public WebElement forgetPassword;
+
+    @FindBy(xpath = "//a[@href='/account/register']")
+    public WebElement registerNewAccount;
+
+    @FindBy(xpath = "//div[@class='alert alert-danger fade show']")
+    public WebElement signInFail;
+
 }
