@@ -45,10 +45,9 @@ public class PRLRegistrationPage {
     @FindBy(id= "register-submit")
     public WebElement registerButton;
 
-<<<<<<< HEAD
     @FindBy(xpath = "//*[contains(text(),'Registration saved!')]")
     public WebElement approvalAlert;
-=======
+
    @FindBy (xpath = "(//div[@class=‘invalid-feedback’])[2]")
     public WebElement firstNameErrorMessage;
 
@@ -69,7 +68,6 @@ public class PRLRegistrationPage {
 
     @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div")
     public WebElement alert;
->>>>>>> master
 
     @FindBy(xpath="//div[text()='This field is invalid']")
     public WebElement emailIsNotValidMessage;
@@ -79,11 +77,6 @@ public class PRLRegistrationPage {
 
     @FindBy(xpath="//div[text()='Your mobile phone number is invalid']")
     public WebElement MobilePhoneIsNotValidMessage;
-
-
-
-
-
 
 
 }

@@ -2,13 +2,9 @@ package com.prlbank.stepdefinitions;
 
 import com.prlbank.pages.PRLHomePage;
 import com.prlbank.pages.PRLRegistrationPage;
-<<<<<<< HEAD
 import com.prlbank.utilities.Driver;
-=======
 import com.prlbank.utilities.ConfigurationReader;
-import com.prlbank.utilities.Driver;
 import io.cucumber.java.en.Given;
->>>>>>> master
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
