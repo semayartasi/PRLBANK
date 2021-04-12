@@ -21,7 +21,7 @@ public class PRLUserSettingsPage {
     public WebElement EmailTextBox;
 
     @FindBy(id = "langKey")
-    public WebElement LanguageTextBox;
+    public WebElement LanguageDD;
 
 //    @FindBy(xpath = "(//select[@id])//option[@value='tr']")
 //    public WebElement turkishLang;

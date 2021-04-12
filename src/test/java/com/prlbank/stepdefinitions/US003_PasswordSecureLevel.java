@@ -3,10 +3,12 @@ package com.prlbank.stepdefinitions;
 import com.github.javafaker.Faker;
 import com.prlbank.pages.PRLHomePage;
 import com.prlbank.pages.PRLRegistrationPage;
+import com.prlbank.utilities.ConfigurationReader;
 import com.prlbank.utilities.Driver;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 
@@ -23,13 +25,11 @@ public class US003_PasswordSecureLevel {
         homePage.icon.click();
     }
 
-   // @Then("user clicks on register button")
+//    @Then("user clicks on register button")
 //    public void user_clicks_on_register_button() {
- //       Driver.wait(1);
-   //     homePage.registerButton.click();
-
-
-   // }
+//        Driver.wait(1);
+//        homePage.registerButton.click();
+//    }
 
     @Then("user navigate on Register page")
     public void user_navigate_on_register_page() {
@@ -104,4 +104,3 @@ public class US003_PasswordSecureLevel {
         Thread.sleep(2000);
     }
 }
-
