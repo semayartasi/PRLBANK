@@ -12,8 +12,8 @@ public class US002_SelmaRegistrationStepDefinitions {
     PRLHomePage prlHomePage= new PRLHomePage();
     PRLRegistrationPage prlRegistrationPage= new PRLRegistrationPage();
 
-    @Then("user clicks on register button")
-    public void user_clicks_on_register_button() {
+    @Then("user clicks on register buttonh")
+    public void user_clicks_on_register_buttonh() {
         prlHomePage.registerButton.click();
     }
 
