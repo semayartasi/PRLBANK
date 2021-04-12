@@ -79,9 +79,4 @@ public class PRLRegistrationPage {
     public WebElement MobilePhoneIsNotValidMessage;
 
 
-
-
-
-
-
 }
