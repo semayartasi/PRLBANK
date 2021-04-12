@@ -3,12 +3,10 @@ package com.prlbank.stepdefinitions;
 import com.github.javafaker.Faker;
 import com.prlbank.pages.PRLHomePage;
 import com.prlbank.pages.PRLRegistrationPage;
-import com.prlbank.utilities.ConfigurationReader;
 import com.prlbank.utilities.Driver;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 
