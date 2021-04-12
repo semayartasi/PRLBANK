@@ -45,9 +45,8 @@ public class PRLRegistrationPage {
     @FindBy(id= "register-submit")
     public WebElement registerButton;
 
-   @FindBy (xpath = "//*[text() ='Your First Name is required']")
+   @FindBy (xpath = "(//div[@class=‘invalid-feedback’])[2]")
     public WebElement firstNameErrorMessage;
-
 
     @FindBy(xpath= "//*[@id='strengthBar']/li[1][@style='background-color: rgb(255, 0, 0);']")
     public WebElement first_strengthBar;

@@ -25,7 +25,8 @@ public class US007StepDefinitions {
 
     @Then("user should see the error message")
     public void userShouldSeeTheErrorMessage() {
-        Assert.assertEquals(prlRegistrationPage.invalidEmailError.getText(),"This field is invalid");
+        //Assert.assertEquals(prlRegistrationPage.invalidEmailError.getText(),"This field is invalid");
+        Assert.assertTrue(prlRegistrationPage.firstNameErrorMessage.isDisplayed());
     }
 
     @Then("User can not enter data in only  English and Turkish languages, so the user can not enter data on other languges")
