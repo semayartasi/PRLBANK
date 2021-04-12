@@ -49,20 +49,32 @@ public class PRLRegistrationPage {
     public WebElement firstNameErrorMessage;
 
 
+    @FindBy(xpath= "//*[@id='strengthBar']/li[1][@style='background-color: rgb(255, 0, 0);']")
+    public WebElement first_strengthBar;
 
+    @FindBy(xpath= "//*[@id='strengthBar']/li[2][@style='background-color: rgb(221, 221, 221);']")
+    public WebElement second_strengthBar;
 
+    @FindBy(xpath= "[@id='strengthBar']/li[3][@style='background-color: rgb(221, 221, 221);']")
+    public WebElement third_strengthBar;
 
+    @FindBy(xpath= "[@id='strengthBar']/li[4][@style='background-color: rgb(221, 221, 221);']")
+    public WebElement fourth_strengthBar;
 
+    @FindBy(xpath= "[@id='strengthBar']/li[5][@style='background-color: rgb(221, 221, 221);']")
+    public WebElement fifth_strengthBar;
 
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div")
+    public WebElement alert;
 
+    @FindBy(xpath="//div[text()='This field is invalid']")
+    public WebElement emailIsNotValidMessage;
 
+    @FindBy(xpath="//div[text()='Your SSN is invalid']")
+    public WebElement SSNIsNotValidMessage;
 
-
-
-
-
-
-
+    @FindBy(xpath="//div[text()='Your mobile phone number is invalid']")
+    public WebElement MobilePhoneIsNotValidMessage;
 
 
 
