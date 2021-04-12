@@ -4,7 +4,7 @@ Feature: System should not allow anyone to register with invalid credentials
   Background: User will sign in
     Given user is on main page
     When user clicks to icon menu
-    Then user clicks on register button
+    Then user clicks on register buttonh
 
   Scenario: TC001_Any field on the registration page should not be left blank - positive testing
     When user clicks on SSN text box and provide an SSN number
