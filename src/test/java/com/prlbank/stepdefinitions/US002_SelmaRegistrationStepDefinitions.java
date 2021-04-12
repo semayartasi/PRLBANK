@@ -2,6 +2,9 @@ package com.prlbank.stepdefinitions;
 
 import com.prlbank.pages.PRLHomePage;
 import com.prlbank.pages.PRLRegistrationPage;
+import com.prlbank.utilities.ConfigurationReader;
+import com.prlbank.utilities.Driver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -12,6 +15,15 @@ public class US002_SelmaRegistrationStepDefinitions {
     PRLHomePage prlHomePage= new PRLHomePage();
     PRLRegistrationPage prlRegistrationPage= new PRLRegistrationPage();
 
+    @Given("user is on main page")
+    public void userIsOnMainPage() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("prlbank_url"));
+        Driver.wait(2);
+    }
+    @When("user clicks to icon menu")
+    public void userClicksToIconMenu() {
+        Driver.waitAndClick(prlHomePage.icon, 5);
+    }
     @Then("user clicks on register button")
     public void user_clicks_on_register_button() {
         prlHomePage.registerButton.click();

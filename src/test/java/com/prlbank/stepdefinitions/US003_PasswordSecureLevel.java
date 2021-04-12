@@ -25,13 +25,11 @@ public class US003_PasswordSecureLevel {
         homePage.icon.click();
     }
 
-    @Then("user clicks on register button")
-    public void user_clicks_on_register_button() {
-        Driver.wait(1);
-        homePage.registerButton.click();
-
-
-    }
+//    @Then("user clicks on register button")
+//    public void user_clicks_on_register_button() {
+//        Driver.wait(1);
+//        homePage.registerButton.click();
+//    }
 
     @Then("user navigate on Register page")
     public void user_navigate_on_register_page() {
