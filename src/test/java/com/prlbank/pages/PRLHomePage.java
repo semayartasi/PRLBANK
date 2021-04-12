@@ -12,19 +12,21 @@ public class PRLHomePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(xpath ="//*[text() ='Register']")
+    public WebElement register;
+
     @FindBy(xpath = "//a[@aria-haspopup='true']")
     public WebElement icon;
 
     @FindBy(xpath = "(//*[text()='Sign in'])[1]")
     public WebElement signInButton;
 
-    @FindBy(id = "account-menu")
-    public WebElement iconMenu;
+//    @FindBy(id = "account-menu")
+//    public WebElement iconMenu;
 
-    @FindBy(xpath = "//*[text()='Sign in'][1]")
-    public WebElement SignInBtn;
 
     @FindBy(xpath = "//*[text()='Register']")
     public WebElement registerButton;
+
 
 }
