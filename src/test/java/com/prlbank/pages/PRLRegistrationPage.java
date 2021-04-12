@@ -11,6 +11,7 @@ public class PRLRegistrationPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+
     @FindBy(id = "ssn")
     public WebElement SSNTextBox;
 
@@ -32,6 +33,9 @@ public class PRLRegistrationPage {
     @FindBy(id= "email")
     public WebElement emailTextBox;
 
+    @FindBy (xpath = "//*[text() ='This field is invalid']")
+    public WebElement invalidEmailError;
+
     @FindBy(id= "firstPassword")
     public WebElement newPasswordTextBox;
 
@@ -41,6 +45,8 @@ public class PRLRegistrationPage {
     @FindBy(id= "register-submit")
     public WebElement registerButton;
 
+   @FindBy (xpath = "(//div[@class=‘invalid-feedback’])[2]")
+    public WebElement firstNameErrorMessage;
 
     @FindBy(xpath= "//*[@id='strengthBar']/li[1][@style='background-color: rgb(255, 0, 0);']")
     public WebElement first_strengthBar;

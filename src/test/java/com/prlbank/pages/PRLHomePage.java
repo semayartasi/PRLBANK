@@ -12,6 +12,9 @@ public class PRLHomePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(xpath ="//*[text() ='Register']")
+    public WebElement register;
+
     @FindBy(xpath = "//a[@aria-haspopup='true']")
     public WebElement icon;
 

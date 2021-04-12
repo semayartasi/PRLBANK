@@ -1,4 +1,4 @@
-@wip
+
   #Feature:'imiz US'mizin id'si ve Aciklamasi
 Feature: US004 Login page should accessible with valid credentials
   #Scenario:'muz TC id'miz ve Acceptance Criteria'miz
