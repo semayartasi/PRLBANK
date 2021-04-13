@@ -18,7 +18,7 @@ public class PRLSignInPage {
     @FindBy(xpath = "//input[@name='password']")
     public WebElement passwordTextBox;
 
-    @FindBy(css = "button[type='submit']")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement signInButton;
 
     @FindBy(xpath = "//button[@class='btn btn-secondary']")
