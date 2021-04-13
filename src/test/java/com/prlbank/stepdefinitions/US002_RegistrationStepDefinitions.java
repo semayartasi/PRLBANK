@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 
-public class US002_SelmaRegistrationStepDefinitions {
+public class US002_RegistrationStepDefinitions {
 
     PRLHomePage prlHomePage= new PRLHomePage();
     PRLRegistrationPage prlRegistrationPage= new PRLRegistrationPage();
