@@ -7,18 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class DEMO {
-    PRLRegistrationPage prlRegistrationPage  = new PRLRegistrationPage();
-    PRLHomePage prlHomePage = new PRLHomePage();
-    PRLSignInPage prlSignInPage = new PRLSignInPage();
-    PRLAdminHomePage prlAdminHomePage = new PRLAdminHomePage();
-    PRLEmployeePage prlEmployeePage = new PRLEmployeePage();
-    PRLCustomersPage prlCustomersPage = new PRLCustomersPage();
-    PRLCreateOrEditACustomerPage prlCreateOrEditACustomerPage = new PRLCreateOrEditACustomerPage();
-    PRLCreateOrEditAnAccountPage prlCreateOrEditAnAccountPage = new PRLCreateOrEditAnAccountPage();
-    PRLAccountsPage prlAccountsPage = new PRLAccountsPage();
-    PRLUserPage prlUserPage = new PRLUserPage();
-
+public class DEMO extends PageInitializer {
 
     @And("user provides information for registration")
     public void userProvidesInformationForRegistration() {

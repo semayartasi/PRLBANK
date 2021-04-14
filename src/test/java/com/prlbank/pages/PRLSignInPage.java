@@ -1,12 +1,13 @@
 package com.prlbank.pages;
 
 
+import com.prlbank.utilities.BrowserUtils;
 import com.prlbank.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PRLSignInPage {
+public class PRLSignInPage extends BrowserUtils {
 
     public PRLSignInPage(){
         PageFactory.initElements(Driver.getDriver(), this);
@@ -42,4 +43,10 @@ public class PRLSignInPage {
     @FindBy(xpath = "//div[@class='alert alert-danger fade show']")
     public WebElement signInFail;
 
+    public void createEmpLoginCR(String uid, String pwd) {
+        sendText(usernameTextBox, uid);
+        sendText(passwordTextBox, pwd);
+//        sendText(confirmPassword, ConfigsReader.getProperty("empPassword"));
+        waitForClickability(signInButton,1);
+    }
 }

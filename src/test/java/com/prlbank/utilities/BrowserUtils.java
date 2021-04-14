@@ -1,6 +1,7 @@
 package com.prlbank.utilities;
 
 import com.google.common.base.Function;
+import com.prlbank.pages.PageInitializer;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -14,13 +15,23 @@ import java.util.Random;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class BrowserUtils {
+public class BrowserUtils extends PageInitializer {
     public static void wait(int secs) {
         try {
             Thread.sleep(1000 * secs);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Method that clears and sends keys
+     * @param element
+     * @param text
+     */
+    public static void sendText(WebElement element, String text) {
+        element.clear();
+        element.sendKeys(text);
     }
 
     /*
@@ -82,7 +93,7 @@ public class BrowserUtils {
         return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
 
-    public static WebElement waitForClickablility(WebElement element, int timeout) {
+    public static WebElement waitForClickability(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
@@ -90,6 +101,11 @@ public class BrowserUtils {
     public static WebElement waitForClickablility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public static void click(WebElement element) {
+        waitForClickability(element,2);
+        element.click();
     }
 
     public static void waitForPageToLoad(long timeOutInSeconds) {
