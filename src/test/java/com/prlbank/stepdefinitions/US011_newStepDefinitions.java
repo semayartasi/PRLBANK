@@ -17,41 +17,6 @@ public class US011_newStepDefinitions {
     PRLCustomersPage prlCustomersPage = new PRLCustomersPage();
     PRLCreateOrEditACustomerPage prlCreateOrEditACustomerPage = new PRLCreateOrEditACustomerPage();
 
-    @Then("user clicks on sign in button")
-    public void user_clicks_on_sign_in_button() {
-        prlHomePage.signInButton.click();
-    }
-
-    @Then("user provides a valid username as manager to username textbox")
-    public void user_provides_a_valid_username_as_manager_to_username_textbox() {
-        prlSignInPage.usernameTextBox.sendKeys("team43manager");
-    }
-
-    @Then("user provides a valid password as manager password to password textbox")
-    public void user_provides_a_valid_password_as_manager_password_to_password_textbox() {
-        prlSignInPage.passwordTextBox.sendKeys("T43manager.");
-    }
-
-    @Then("User clicks on Sign in button on the Sign in page")
-    public void userClicksOnSignInButtonOnTheSignInPage() {
-        prlSignInPage.signInButton.click();
-    }
-
-    @Then("user clicks on my operations button")
-    public void user_clicks_on_my_operations_button() {
-        prlManagerHomePage.myOperationsDropdown.click();
-
-    }
-
-    @Then("user clicks on manage customers dropdown")
-    public void user_clicks_on_manage_customers_dropdown() {
-        prlManagerHomePage.manageCustomer.click();
-    }
-
-    @Then("user clicks on create a new customer button on customers page")
-    public void user_clicks_on_create_a_new_customer_button_on_customers_page() {
-        prlCustomersPage.createANewCustomerButton.click();
-    }
 
     @Then("user enter first name")
     public void user_enter_first_name() {
