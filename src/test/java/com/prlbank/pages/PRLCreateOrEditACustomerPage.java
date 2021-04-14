@@ -75,4 +75,9 @@ public class PRLCreateOrEditACustomerPage {
     @FindBy(id = "cancel-save")
     public WebElement backArrowButton;
 
+    @FindBy(xpath = "//*[text()='This field is required.']")
+    public WebElement errorMessage;
+
+
+
 }

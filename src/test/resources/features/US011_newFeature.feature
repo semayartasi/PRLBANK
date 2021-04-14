@@ -6,7 +6,7 @@
       Then user clicks on sign in button
       Then user provides a valid username as manager to username textbox
       And user provides a valid password as manager password to password textbox
-      Then User clicks on Sign in button on the Sign in page
+      Then User clicks on Signin button
       Then user clicks on my operations button
       And user clicks on manage customers dropdown
       Then user clicks on create a new customer button on customers page
