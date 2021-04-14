@@ -39,33 +39,5 @@ public class PageInitializer extends Driver {
         prlUserSettingsPage = new PRLUserSettingsPage();
 
     }
-
-////    WHY WE HAVE TO IMPLEMNT THOS CODES?
-//    @Override
-//    public int getAccessControl() {
-//        return 0;
-//    }
-//
-//    @Override
-//    public boolean isVirtual() {
-//        return false;
-//    }
-//
-//    @Override
-//    public Type getType() {
-//        return null;
-//    }
-
-
-//    PRLRegistrationPage prlRegistrationPage  = new PRLRegistrationPage();
-//    PRLHomePage prlHomePage = new PRLHomePage();
-//    PRLSignInPage prlSignInPage = new PRLSignInPage();
-//    PRLAdminHomePage prlAdminHomePage = new PRLAdminHomePage();
-//    PRLEmployeePage prlEmployeePage = new PRLEmployeePage();
-//    PRLCustomersPage prlCustomersPage = new PRLCustomersPage();
-//    PRLCreateOrEditACustomerPage prlCreateOrEditACustomerPage = new PRLCreateOrEditACustomerPage();
-//    PRLCreateOrEditAnAccountPage prlCreateOrEditAnAccountPage = new PRLCreateOrEditAnAccountPage();
-//    PRLAccountsPage prlAccountsPage = new PRLAccountsPage();
-//    PRLUserPage prlUserPage = new PRLUserPage();
 }
 
