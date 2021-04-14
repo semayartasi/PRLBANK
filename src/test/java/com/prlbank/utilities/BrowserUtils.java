@@ -37,10 +37,12 @@ public class BrowserUtils {
         }
         Driver.getDriver().switchTo().window(origin);
     }
+
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
     }
+
     /**
      * return a list of string from a list of elements ignores any element with no
      * text
@@ -55,6 +57,7 @@ public class BrowserUtils {
         }
         return elemTexts;
     }
+
     public static List<String> getElementsText(By locator) {
         List<WebElement> elems = Driver.getDriver().findElements(locator);
         List<String> elemTexts = new ArrayList<>();
@@ -63,26 +66,32 @@ public class BrowserUtils {
         }
         return elemTexts;
     }
+
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
+
     public static WebElement waitForVisibility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
     public static Boolean waitForInVisibility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
+
     public static WebElement waitForClickablility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+
     public static WebElement waitForClickablility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
+
     public static void waitForPageToLoad(long timeOutInSeconds) {
         ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
@@ -96,6 +105,7 @@ public class BrowserUtils {
             error.printStackTrace();
         }
     }
+
     public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
         FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
                 .withTimeout(Duration.ofSeconds(timeinsec))
@@ -108,6 +118,7 @@ public class BrowserUtils {
         });
         return element;
     }
+
     /**
      * Verifies whether the element matching the provided locator is displayed on page
      * fails if the element matching the provided locator is not found or not displayed
@@ -121,6 +132,7 @@ public class BrowserUtils {
             Assert.fail("Element not found: " + by);
         }
     }
+
     /**
      * Verifies whether the element matching the provided locator is NOT displayed on page
      * fails if the element matching the provided locator is not found or not displayed
@@ -134,6 +146,7 @@ public class BrowserUtils {
             e.printStackTrace();
         }
     }
+
     /**
      * Verifies whether the element is displayed on page
      * fails if the element is not found or not displayed
@@ -147,6 +160,7 @@ public class BrowserUtils {
             Assert.fail("Element not found: " + element);
         }
     }
+
     /**
      * Waits for element to be not stale
      *
@@ -176,6 +190,7 @@ public class BrowserUtils {
                 }
         }
     }
+
     /**
      * Selects a random value from a dropdown list and returns the selected Web Element
      *
@@ -189,6 +204,7 @@ public class BrowserUtils {
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
     }
+
     /**
      * Clicks on an element using JavaScript
      *
@@ -198,6 +214,7 @@ public class BrowserUtils {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
     }
+
     /**
      * Scrolls down to an element using JavaScript
      *
@@ -206,6 +223,7 @@ public class BrowserUtils {
     public static void scrollToElement(WebElement element) {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
     /**
      * Performs double click action on an element
      *
@@ -214,6 +232,7 @@ public class BrowserUtils {
     public static void doubleClick(WebElement element) {
         new Actions(Driver.getDriver()).doubleClick(element).build().perform();
     }
+
     /**
      * Changes the HTML attribute of a Web Element to the given value using JavaScript
      *
@@ -224,6 +243,7 @@ public class BrowserUtils {
     public static void setAttribute(WebElement element, String attributeName, String attributeValue) {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", element, attributeName, attributeValue);
     }
+
     /**
      * @param element
      * @param check
@@ -239,6 +259,7 @@ public class BrowserUtils {
             }
         }
     }
+
     public static void clickWithTimeOut(WebElement element, int timeout) {
         for (int i = 0; i < timeout; i++) {
             try {
@@ -249,6 +270,7 @@ public class BrowserUtils {
             }
         }
     }
+
     /**
      * executes the given JavaScript command on given web element
      *
@@ -258,6 +280,7 @@ public class BrowserUtils {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript(command, element);
     }
+
     /**
      * executes the given JavaScript command on given web element
      *
