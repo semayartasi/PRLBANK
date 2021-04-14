@@ -14,3 +14,6 @@ Feature: System should allow user to manage their account
     Then user can update Account Type
 
 #  Scenario: User can view transaction
+#  transaction varmi yok mu buton varsa trasncation olmus demek yoksa yoktur
+#    asagda islemler cikiyormu vallidation yapablrsin ne kadar amount transfer
+#    olmus bunu getext yap assertion
