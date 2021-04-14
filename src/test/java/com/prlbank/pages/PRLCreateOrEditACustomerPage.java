@@ -11,127 +11,68 @@ import java.util.List;
 
 public class PRLCreateOrEditACustomerPage {
 
-    public PRLCreateOrEditACustomerPage(){
+    public PRLCreateOrEditACustomerPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id="search-ssn")
+    @FindBy(id = "search-ssn")
     public WebElement searchSsnTextBox;
 
-    @FindBy(xpath="//button[text()='Search']")
+    @FindBy(xpath = "//button[text()='Search']")
     public WebElement searchButton;
 
-    @FindBy(xpath="//*[@id=\"tp-customer-firstName\"]")
+    @FindBy(xpath = "//*[@id=\"tp-customer-firstName\"]")
     public WebElement firstNameTextBox;
 
-    @FindBy(xpath="//*[@id=\"tp-customer-lastName\"]")
+    @FindBy(xpath = "//*[@id=\"tp-customer-lastName\"]")
     public WebElement lastNameTextBox;
 
-    @FindBy(xpath="//*[@id=\"tp-customer-middleInitial\"]")
+    @FindBy(xpath = "//*[@id=\"tp-customer-middleInitial\"]")
     public WebElement middleInitialTextBox;
 
-    @FindBy(xpath="//*[@id=\"tp-customer-email\"]")
+    @FindBy(xpath = "//*[@id=\"tp-customer-email\"]")
     public WebElement emailTextBox;
 
-    @FindBy(id="tp-customer-mobilePhoneNumber")
+    @FindBy(id = "tp-customer-mobilePhoneNumber")
     public WebElement mobilePhoneNumberTextBox;
 
-    @FindBy(id="tp-customer-phoneNumber")
+    @FindBy(id = "tp-customer-phoneNumber")
     public WebElement phoneNumberTextBox;
 
-    @FindBy(xpath="//*[@id=\"tp-customer-zipCode\"]")
+    @FindBy(xpath = "//*[@id=\"tp-customer-zipCode\"]")
     public WebElement zipCodeTextBox;
 
-    @FindBy(xpath="//*[@id=\"tp-customer-address\"]")
+    @FindBy(xpath = "//*[@id=\"tp-customer-address\"]")
     public WebElement addressTextBox;
 
-    @FindBy(xpath="//*[@id=\"tp-customer-city\"]")
+    @FindBy(xpath = "//*[@id=\"tp-customer-city\"]")
     public WebElement cityTextBox;
 
-    @FindBy(id="tp-customer-ssn")
+    @FindBy(id = "tp-customer-ssn")
     public WebElement ssnTextBox;
 
-    @FindBy(id="tp-customer-createDate")
+    @FindBy(id = "tp-customer-createDate")
     public WebElement createDateSelect;
 
-    @FindBy (id="tp-customer-country")
+    @FindBy(id = "tp-customer-country")
     public WebElement multiSelectDDCountry;
 
-    @FindBy (id="tp-customer-state")
+    @FindBy(id = "tp-customer-state")
     public WebElement stateTextBox;
 
-    @FindBy (id="tp-customer-user")
+    @FindBy(id = "tp-customer-user")
     public WebElement multiSelectDDUser;
 
-    @FindBy(xpath="//select[@id='tp-customer-account']")
+    @FindBy(xpath = "//select[@id='tp-customer-account']")
     public WebElement multiSelectAccount;
 
-    @FindBy (id="tp-customer-zelleEnrolled")
+    @FindBy(id = "tp-customer-zelleEnrolled")
     public WebElement zelleEnrolledCheckBox;
 
-    @FindBy (id="save-entity")
+    @FindBy(id = "save-entity")
     public WebElement saveButton;
 
-    @FindBy (id="cancel-save")
+    @FindBy(id = "cancel-save")
     public WebElement backArrowButton;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

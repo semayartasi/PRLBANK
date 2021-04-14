@@ -13,7 +13,7 @@ Feature: Demo presentation
     And employee integrates accounts for the user
     Then login out from employee account
     Then user logs into their own account
-    And user navigates to My Accounts
+    And user navigates to My Operations
     Then user makes money transfer
     And user verifies their money transfer
 

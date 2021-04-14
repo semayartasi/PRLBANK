@@ -1,8 +1,6 @@
 package com.prlbank.stepdefinitions;
 
-import com.prlbank.pages.PRLHomePage;
-import com.prlbank.pages.PRLRegistrationPage;
-import com.prlbank.pages.PRLSignInPage;
+import com.prlbank.pages.*;
 import com.prlbank.utilities.ConfigurationReader;
 import com.prlbank.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -13,6 +11,14 @@ public class DEMO {
     PRLRegistrationPage prlRegistrationPage  = new PRLRegistrationPage();
     PRLHomePage prlHomePage = new PRLHomePage();
     PRLSignInPage prlSignInPage = new PRLSignInPage();
+    PRLAdminHomePage prlAdminHomePage = new PRLAdminHomePage();
+    PRLEmployeePage prlEmployeePage = new PRLEmployeePage();
+    PRLCustomersPage prlCustomersPage = new PRLCustomersPage();
+    PRLCreateOrEditACustomerPage prlCreateOrEditACustomerPage = new PRLCreateOrEditACustomerPage();
+    PRLCreateOrEditAnAccountPage prlCreateOrEditAnAccountPage = new PRLCreateOrEditAnAccountPage();
+    PRLAccountsPage prlAccountsPage = new PRLAccountsPage();
+    PRLUserPage prlUserPage = new PRLUserPage();
+
 
     @And("user provides information for registration")
     public void userProvidesInformationForRegistration() {
@@ -47,39 +53,79 @@ public class DEMO {
 
     @Then("admin activates the account of the user")
     public void adminActivatesTheAccountOfTheUser() {
-
+        prlAdminHomePage.administrationDD.click();
+        prlAdminHomePage.userManagementLink.click();
+        prlAdminHomePage.deactivateButtonforUser.click();
     }
 
     @And("login out from admin account")
     public void loginOutFromAdminAccount() {
-
+        prlAdminHomePage.signOutLink.click();
     }
 
     @Then("login to employee account {string} and {string}")
     public void loginToEmployeeAccountAnd(String arg0, String arg1) {
+        prlHomePage.icon.click();
+        prlHomePage.signInButton.click();
+        prlSignInPage.usernameTextBox.sendKeys(ConfigurationReader.getProperty("emplUsername"));
+        prlSignInPage.passwordTextBox.sendKeys(ConfigurationReader.getProperty("emplPaswd"));
+        prlSignInPage.signInButton.click();
     }
 
     @And("employee integrates accounts for the user")
     public void employeeIntegratesAccountsForTheUser() {
+        prlEmployeePage.MyOperations.click();
+        prlEmployeePage.ManageAccounts.click();
+        prlCustomersPage.createANewCustomerButton.click();
+        prlAccountsPage.createANewAccountButton.click();
+        prlCreateOrEditAnAccountPage.descriptionTextBox.sendKeys("TEAM43 CHECKING");
+        prlCreateOrEditAnAccountPage.balanceTextBox.sendKeys("90000000000");
+        Driver.wait(2);
+        prlCreateOrEditAnAccountPage.saveButton.click();
+        Driver.wait(2);
+
+        prlEmployeePage.MyOperations.click();
+        prlEmployeePage.ManageAccounts.click();
+        prlCustomersPage.createANewCustomerButton.click();
+        prlCreateOrEditAnAccountPage.descriptionTextBox.sendKeys("TEAM43 SAVING");
+        prlCreateOrEditAnAccountPage.balanceTextBox.sendKeys("1000000");
+        Driver.wait(2);
+        prlCreateOrEditAnAccountPage.saveButton.click();
     }
 
     @Then("login out from employee account")
     public void loginOutFromEmployeeAccount() {
+        prlAccountsPage.iconMenu.click();
+        prlAccountsPage.signOutButton.click();
     }
 
     @Then("user logs into their own account")
     public void userLogsIntoTheirOwnAccount() {
+        prlHomePage.icon.click();
+        prlHomePage.signInButton.click();
+        prlSignInPage.usernameTextBox.sendKeys(ConfigurationReader.getProperty(""));
+        prlSignInPage.passwordTextBox.sendKeys(ConfigurationReader.getProperty(""));
+        prlSignInPage.signInButton.click();
     }
 
-    @And("user navigates to My Accounts")
-    public void userNavigatesToMyAccounts() {
+
+    @And("user navigates to My Operations")
+    public void userNavigatesToMyOperations() {
+        prlUserPage.MyOperations.click();
     }
 
     @Then("user makes money transfer")
     public void userMakesMoneyTransfer() {
+        prlUserPage.TransferMoney.click();
+        prlUserPage.fromAccount.sendKeys(ConfigurationReader.getProperty("fromTextbox"));
+        prlUserPage.toAccount.sendKeys(ConfigurationReader.getProperty("toTextbox"));
+        prlUserPage.balanceTextBox.sendKeys(ConfigurationReader.getProperty("balanceTextBox"));
+        prlUserPage.descriptionTextBox.sendKeys(ConfigurationReader.getProperty("descriptionTextBox"));
+        prlUserPage.MakeTransferButton.click();
     }
 
     @And("user verifies their money transfer")
     public void userVerifiesTheirMoneyTransfer() {
+
     }
 }
