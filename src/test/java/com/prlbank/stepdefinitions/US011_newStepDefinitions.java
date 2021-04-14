@@ -16,8 +16,8 @@ public class US011_newStepDefinitions {
     PRLManagerHomePage prlManagerHomePage = new PRLManagerHomePage();
     PRLCustomersPage prlCustomersPage = new PRLCustomersPage();
     PRLCreateOrEditACustomerPage prlCreateOrEditACustomerPage = new PRLCreateOrEditACustomerPage();
-
-
+  
+  
     @Then("user enter first name")
     public void user_enter_first_name() {
         prlCreateOrEditACustomerPage.firstNameTextBox.sendKeys("Ali");
