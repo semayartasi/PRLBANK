@@ -6,13 +6,7 @@ import com.prlbank.utilities.Driver;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
-public class US009_StepDefinitions {
-
-    PRLHomePage prlHomePage= new PRLHomePage();
-    PRLSignInPage prlSignInPage=new PRLSignInPage();
-    PRLManagerHomePage prlManagerHomePage=new PRLManagerHomePage();
-    PRLCustomersPage prlCustomersPage=new PRLCustomersPage();
-    PRLCreateOrEditACustomerPage prlCreateOrEditACustomerPage=new PRLCreateOrEditACustomerPage();
+public class US009_StepDefinitions extends PageInitializer {
 
     @Then("user clicks on sign in button")
     public void user_clicks_on_sign_in_button() {
@@ -58,11 +52,7 @@ public class US009_StepDefinitions {
 
     @Then("user should see customers' registration info populated")
     public void user_should_see_customers_registration_info_populated() {
-        Assert.assertEquals(prlCreateOrEditACustomerPage.firstNameTextBox.getText(),"settar");
-
+        Assert.assertEquals(prlCreateOrEditACustomerPage.firstNameTextBox.getText(), "settar");
     }
-
-
-
 
 }

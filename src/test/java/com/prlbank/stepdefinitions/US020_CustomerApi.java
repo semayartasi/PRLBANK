@@ -1,10 +1,11 @@
 package com.prlbank.stepdefinitions;
 
+import com.prlbank.pages.PageInitializer;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class US020_CustomerApi {
+public class US020_CustomerApi extends PageInitializer {
     @Given("all api data is set to  using api end point {string}")
     public void allApiDataIsSetToUsingApiEndPoint(String arg0) {
 

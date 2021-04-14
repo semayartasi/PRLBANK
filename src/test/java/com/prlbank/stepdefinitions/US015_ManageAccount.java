@@ -39,4 +39,5 @@ public class US015_ManageAccount extends PageInitializer {
     @Then("user can update Account Type")
     public void userCanUpdateAccountType() {
     }
+
 }

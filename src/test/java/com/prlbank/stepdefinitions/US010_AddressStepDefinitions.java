@@ -1,24 +1,21 @@
 package com.prlbank.stepdefinitions;
 
 import com.prlbank.pages.PRLCreateOrEditACustomerPage;
+import com.prlbank.pages.PageInitializer;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
-public class US010_AddressStepDefinitions {
-
-    PRLCreateOrEditACustomerPage prlCreateOrEditACustomerPage=new PRLCreateOrEditACustomerPage();
+public class US010_AddressStepDefinitions extends PageInitializer {
 
     @Then("user clicks on address text box on customer page and click any other places")
     public void user_clicks_on_address_text_box_on_customer_page_and_click_any_other_places() {
         prlCreateOrEditACustomerPage.addressTextBox.click();
         prlCreateOrEditACustomerPage.cityTextBox.click();
-
     }
 
     @Then("user should see an error message")
     public void user_should_see_an_error_message() {
         Assert.assertTrue(prlCreateOrEditACustomerPage.errorMessage.isDisplayed());
-
     }
 
     @Then("user provides an address to address text box")
@@ -61,7 +58,5 @@ public class US010_AddressStepDefinitions {
     public void user_provides_a_state_to_state_text_box() {
 
     }
-
-
 
 }

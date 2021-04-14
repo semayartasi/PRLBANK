@@ -1,6 +1,8 @@
 package com.prlbank.stepdefinitions;
+
 import com.prlbank.pages.PRLHomePage;
 import com.prlbank.pages.PRLRegistrationPage;
+import com.prlbank.pages.PageInitializer;
 import com.prlbank.utilities.ConfigurationReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -8,10 +10,7 @@ import org.testng.Assert;
 
 import javax.security.auth.login.Configuration;
 
-public class US007StepDefinitions {
-
-    PRLRegistrationPage prlRegistrationPage = new PRLRegistrationPage();
-    PRLHomePage prlHomePage = new PRLHomePage();
+public class US007StepDefinitions extends PageInitializer {
 
     @And("User clicks on email textbox")
     public void userClicksOnEmailTextbox() {
@@ -20,7 +19,7 @@ public class US007StepDefinitions {
 
     @And("User enters an invalid email")
     public void userEntersAnInvalidEmail() {
-     prlRegistrationPage.emailTextBox.sendKeys(ConfigurationReader.getProperty("invalid_email"));
+        prlRegistrationPage.emailTextBox.sendKeys(ConfigurationReader.getProperty("invalid_email"));
     }
 
     @Then("user should see the error message")

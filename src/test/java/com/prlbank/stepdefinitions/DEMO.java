@@ -72,7 +72,6 @@ public class DEMO extends PageInitializer {
         Driver.wait(2);
         prlCreateOrEditAnAccountPage.saveButton.click();
         Driver.wait(2);
-
         prlEmployeePage.MyOperations.click();
         prlEmployeePage.ManageAccounts.click();
         prlCustomersPage.createANewCustomerButton.click();
@@ -97,7 +96,6 @@ public class DEMO extends PageInitializer {
         prlSignInPage.signInButton.click();
     }
 
-
     @And("user navigates to My Operations")
     public void userNavigatesToMyOperations() {
         prlUserPage.MyOperations.click();
@@ -117,4 +115,5 @@ public class DEMO extends PageInitializer {
     public void userVerifiesTheirMoneyTransfer() {
 
     }
+
 }
