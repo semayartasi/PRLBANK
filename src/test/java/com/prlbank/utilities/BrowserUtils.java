@@ -306,4 +306,24 @@ public class BrowserUtils extends PageInitializer {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript(command);
     }
+    /**
+     * Method that checks if text is there and then selects it
+     *
+     * @param element
+     * @param textToSelect
+     */
+    public static void selectDdValue(WebElement element, String textToSelect) {
+        try {
+            Select select = new Select(element);
+            List<WebElement> options = select.getOptions();
+            for (WebElement el : options) {
+                if (el.getText().equals(textToSelect)) {
+                    select.selectByVisibleText(textToSelect);
+                    break;
+                }
+            }
+        } catch (UnexpectedTagNameException e) {
+            e.printStackTrace();
+        }
+    }
 }
