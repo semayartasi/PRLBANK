@@ -14,4 +14,10 @@ public class PRLAccountsPage {
     @FindBy(id="jh-create-entity")
     public WebElement createANewAccountButton;
 
+    @FindBy(id = "account-menu")
+    public WebElement iconMenu;
+
+    @FindBy(xpath = "//*[text()='Sign out']")
+    public WebElement signOutButton;
+
 }

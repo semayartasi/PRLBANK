@@ -14,7 +14,7 @@ public class PRLManagerHomePage {
     @FindBy(id = "entity-menu")
     public WebElement myOperationsDropdown;
 
-    @FindBy(xpath = "//*[@id='entity-menu']/div/a[1]/span")
+    @FindBy(xpath = "//*[@id=\"entity-menu\"]/div/a[1]/span")
     public WebElement manageCustomer;
 
     @FindBy(xpath ="//*[text()='Manage Accounts']")

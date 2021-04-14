@@ -43,6 +43,8 @@ public class PRLCreateOrEditAnAccountPage {
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     public List<WebElement> invalidFeedback;
 
+
+
     public void selectAccountType(String type) {
         Select accountTypeDropdown = new Select(multiSelectDDAccountType);
         accountTypeDropdown.selectByVisibleText(type);
