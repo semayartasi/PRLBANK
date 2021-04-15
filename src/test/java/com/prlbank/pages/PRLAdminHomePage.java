@@ -22,7 +22,7 @@ public class PRLAdminHomePage {
     @FindBy(xpath = "//*[text()='team43 Saving Account']")
     public WebElement savingAccountName;
 
-    @FindBy(xpath = "//*[@id=“demo43username”]/td[4]/button")
+//    @FindBy(xpath = "//*[@id="demo43username1"]/td[4]/button")
     public WebElement deactivateButtonforUser;
 
     @FindBy(id = "account-menu")

@@ -19,7 +19,7 @@ Feature: Demo presentation
 
     Examples:
     |adminusername|adminpswd|employeeusername|employeepswd|
-    |team43admin  |T43admin |                |            |
+    |team43admin  |T43admin. |                |            |
 
 
 
