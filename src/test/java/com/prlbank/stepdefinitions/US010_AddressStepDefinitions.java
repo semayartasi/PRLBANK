@@ -25,7 +25,7 @@ public class US010_AddressStepDefinitions extends PageInitializer {
 
     @Then("user should not see error message")
     public void user_should_not_see_error_message() {
-        Assert.assertFalse(prlCreateOrEditACustomerPage.errorMessage.isDisplayed());
+        Assert.assertFalse(prlCreateOrEditACustomerPage.verifyElementNotDisplayed());
     }
 
     @Then("user clicks on city text box on customer page and click any other places")
@@ -41,6 +41,7 @@ public class US010_AddressStepDefinitions extends PageInitializer {
 
     @Then("user clicks on country dropdown on customer page and click any other places")
     public void user_clicks_on_country_dropdown_on_customer_page_and_click_any_other_places() {
+        prlCreateOrEditACustomerPage.multiSelectDDCountry.click();
 
     }
 

@@ -78,6 +78,19 @@ public class PRLCreateOrEditACustomerPage {
     @FindBy(xpath = "//*[text()='This field is required.']")
     public WebElement errorMessage;
 
+    @FindBy(xpath = "(//*[text()='TEAM43 CHECKING'])[1]")
+    public WebElement checkingAcc;
 
+    @FindBy(xpath = "(//*[text()='TEAM43 SAVING'])[1]")
+    public WebElement savingAcc;
+
+
+    public boolean verifyElementNotDisplayed(){
+        try{
+            return(errorMessage.isDisplayed());
+        }catch (Exception e){
+            return false;
+        }
+    }
 
 }

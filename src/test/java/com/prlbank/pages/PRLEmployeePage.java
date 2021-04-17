@@ -19,5 +19,8 @@ public class PRLEmployeePage {
     @FindBy(xpath = "//*[text()='Manage Accounts']")
     public WebElement ManageAccounts;
 
+    @FindBy(xpath="//*[text()='Create a new Customer']")
+    public WebElement createANewCustomerButton;
+
 
 }
