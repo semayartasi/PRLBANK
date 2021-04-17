@@ -19,5 +19,6 @@ public class PRLAccountsPage {
 
     @FindBy(xpath = "//*[text()='Sign out']")
     public WebElement signOutButton;
+    
 
 }
