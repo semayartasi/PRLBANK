@@ -9,14 +9,7 @@ import org.openqa.selenium.By;
 
 import java.text.SimpleDateFormat;
 
-public class US011_newStepDefinitions {
-
-    PRLHomePage prlHomePage = new PRLHomePage();
-    PRLSignInPage prlSignInPage = new PRLSignInPage();
-    PRLManagerHomePage prlManagerHomePage = new PRLManagerHomePage();
-    PRLCustomersPage prlCustomersPage = new PRLCustomersPage();
-    PRLCreateOrEditACustomerPage prlCreateOrEditACustomerPage = new PRLCreateOrEditACustomerPage();
-
+public class US011_newStepDefinitions extends PageInitializer {
 
     @Then("user enter first name")
     public void user_enter_first_name() {
@@ -96,7 +89,6 @@ public class US011_newStepDefinitions {
     @Then("user select the country on the Country Box")
     public void user_select_the_country_on_the_country_box() {
         BrowserUtils.selectDdValue(prlCreateOrEditACustomerPage.multiSelectDDCountry, "TURKEY");
-
     }
 
     @Then("user enter State")
@@ -129,6 +121,5 @@ public class US011_newStepDefinitions {
     public void user_verify_account_created() {
 
     }
-
 
 }

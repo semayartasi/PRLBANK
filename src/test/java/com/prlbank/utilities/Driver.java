@@ -1,5 +1,6 @@
 package com.prlbank.utilities;
 
+import com.prlbank.pages.PageInitializer;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +21,7 @@ public class Driver {
     //Why?=>We don't want to create and initialize the driver when we don't need
     //We will create and initialize the driver when it is null
     //We can use Driver class with different browser(chrome,firefox,headless)
-    private Driver() {
+    public Driver() {  //private
         //we don't want to create another abject. Singleton pattern
     }
 
@@ -51,6 +52,9 @@ public class Driver {
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+//        driver.get(ConfigurationReader.getProperty("url"));
+        // initialize all page objects as part of setup
+        PageInitializer.initialize();
         return driver;
     }
 

@@ -16,18 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.text.BreakIterator;
 import java.util.List;
 
-public class DEMO {
-    PRLRegistrationPage prlRegistrationPage  = new PRLRegistrationPage();
-    PRLHomePage prlHomePage = new PRLHomePage();
-    PRLSignInPage prlSignInPage = new PRLSignInPage();
-    PRLAdminHomePage prlAdminHomePage = new PRLAdminHomePage();
-    PRLEmployeePage prlEmployeePage = new PRLEmployeePage();
-    PRLCustomersPage prlCustomersPage = new PRLCustomersPage();
-    PRLCreateOrEditACustomerPage prlCreateOrEditACustomerPage = new PRLCreateOrEditACustomerPage();
-    PRLCreateOrEditAnAccountPage prlCreateOrEditAnAccountPage = new PRLCreateOrEditAnAccountPage();
-    PRLAccountsPage prlAccountsPage = new PRLAccountsPage();
-    PRLUserPage prlUserPage = new PRLUserPage();
-
+public class DEMO extends PageInitializer {
 
     @And("user provides information for registration")
     public void userProvidesInformationForRegistration() {
@@ -212,7 +201,6 @@ public class DEMO {
         prlSignInPage.signInButton.click();
     }
 
-
     @And("user navigates to My Operations")
     public void userNavigatesToMyOperations() {
         Driver.wait(3);
@@ -246,4 +234,5 @@ public class DEMO {
 
 
     }
+
 }

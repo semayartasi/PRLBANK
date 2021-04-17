@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class PRLUserPage {
+public class PRLUserPage extends PageInitializer {
     public PRLUserPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }

@@ -3,6 +3,7 @@ package com.prlbank.stepdefinitions;
 import com.prlbank.pages.PRLHomePage;
 import com.prlbank.pages.PRLSignInPage;
 import com.prlbank.pages.PRLUserSettingsPage;
+import com.prlbank.pages.PageInitializer;
 import com.prlbank.utilities.BrowserUtils;
 import com.prlbank.utilities.ConfigurationReader;
 import com.prlbank.utilities.Driver;
@@ -11,16 +12,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class US006_UserSettings {
-
-    PRLHomePage prlHomePage = new PRLHomePage();
-    PRLSignInPage prlSignInPage = new PRLSignInPage();
-    PRLUserSettingsPage prlUserSettingsPage = new PRLUserSettingsPage();
+public class US006_UserSettings extends PageInitializer {
 
     @Given("user goes to login page")
     public void userGoesToLoginPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("prlbank_url"));
-        Driver.waitAndClick(prlHomePage.icon,3);
+        Driver.waitAndClick(prlHomePage.icon, 3);
         prlHomePage.signInButton.click();
         Driver.wait(5);
     }
@@ -55,7 +52,7 @@ public class US006_UserSettings {
 
     @When("user selects turkish option from dropdown {string}")
     public void userSelectsTurkishOptionFromDropdown(String lang) {
-        Driver.selectByIndex(prlUserSettingsPage.LanguageDD,1);
+        Driver.selectByIndex(prlUserSettingsPage.LanguageDD, 1);
         Driver.wait(3);
     }
 
