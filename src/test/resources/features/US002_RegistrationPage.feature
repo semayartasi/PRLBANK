@@ -29,6 +29,7 @@ Feature: System should not allow anyone to register with invalid credentials
     Then user clicks on email text box and provide an email
     Then user clicks on new password text box and provide a password
     And user leaves new password confirmation text box blanked
+    And user clicks on register button on registration page
     Then user should see rejection message
 
   Scenario: TC003-SSN number cannot be of any chars nor spec chars except "-" - positive testing

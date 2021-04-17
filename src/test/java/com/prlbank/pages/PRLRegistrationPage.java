@@ -48,6 +48,9 @@ public class PRLRegistrationPage {
     @FindBy(xpath = "//*[contains(text(),'Registration saved!')]")
     public WebElement approvalAlert;
 
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement confirmationPasswordErrorMessage;
+
     @FindBy(xpath = "(//div[@class=‘invalid-feedback’])[2]")
     public WebElement firstNameErrorMessage;
 
@@ -77,6 +80,14 @@ public class PRLRegistrationPage {
 
     @FindBy(xpath = "//div[text()='Your mobile phone number is invalid']")
     public WebElement MobilePhoneIsNotValidMessage;
+
+    public boolean verifyElementNotDisplayed(WebElement element){
+        try{
+            return(element.isDisplayed());
+        }catch (Exception e){
+            return false;
+        }
+    }
 
 
 }

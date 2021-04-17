@@ -19,10 +19,10 @@ public class PRLUserPage {
     @FindBy(xpath = "//*[text()='Transfer Money']")
     public WebElement TransferMoney;
 
-    @FindBy(id = "fromAccountId")
+    @FindBy(xpath="//*[@id=\"fromAccountId\"]")
     public WebElement fromAccount;
 
-    @FindBy(id = "toAccountId")
+    @FindBy(xpath="//*[@id=\"toAccountId\"]")
     public WebElement toAccount;
 
     @FindBy(id = "balance")

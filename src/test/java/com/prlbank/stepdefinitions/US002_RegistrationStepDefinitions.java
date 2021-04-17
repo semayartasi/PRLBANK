@@ -18,7 +18,7 @@ public class US002_RegistrationStepDefinitions {
     @Given("user is on main page")
     public void userIsOnMainPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("prlbank_url"));
-        Driver.wait(2);
+
     }
     @When("user clicks to icon menu")
     public void userClicksToIconMenu() {
@@ -31,7 +31,7 @@ public class US002_RegistrationStepDefinitions {
 
     @When("user clicks on SSN text box and provide an SSN number")
     public void user_clicks_on_ssn_text_box_and_provide_an_ssn_number() {
-        prlRegistrationPage.SSNTextBox.sendKeys("676-08-9262");
+        prlRegistrationPage.SSNTextBox.sendKeys("676-08-9442");
     }
 
     @Then("user clicks on first name text box and provide a first name")
@@ -56,7 +56,7 @@ public class US002_RegistrationStepDefinitions {
 
     @Then("user clicks on username and provide a username")
     public void user_clicks_on_username_and_provide_a_username() {
-        prlRegistrationPage.userNameTextBox.sendKeys("username");
+        prlRegistrationPage.userNameTextBox.sendKeys("username1");
     }
 
     @Then("user clicks on email text box and provide an email")
@@ -94,12 +94,13 @@ public class US002_RegistrationStepDefinitions {
 
     @Then("user should see rejection message")
     public void user_should_see_rejection_message() {
+        Assert.assertTrue(prlRegistrationPage.confirmationPasswordErrorMessage.isDisplayed());
 
     }
 
     @Then("user should not see SSN is not valid error message")
     public void user_should_not_see_ssn_is_not_valid_error_message() {
-
+        Assert.assertFalse(prlRegistrationPage.verifyElementNotDisplayed(prlRegistrationPage.SSNIsNotValidMessage));
     }
 
     @When("user clicks on SSN text box and provide an invalid SSN number")
@@ -109,12 +110,12 @@ public class US002_RegistrationStepDefinitions {
 
     @Then("user should see SSN is not valid error message")
     public void user_should_see_ssn_is_not_valid_error_message() {
-        prlRegistrationPage.SSNIsNotValidMessage.isDisplayed();
+        Assert.assertTrue(prlRegistrationPage.SSNIsNotValidMessage.isDisplayed());
     }
 
     @Then("user should not see mobile phone is not valid error message")
     public void user_should_not_see_mobile_phone_is_not_valid_error_message() {
-
+        Assert.assertFalse(prlRegistrationPage.verifyElementNotDisplayed(prlRegistrationPage.MobilePhoneIsNotValidMessage));
     }
 
     @When("user clicks on mobilephone text box and provide an invalid mobile phone")
@@ -124,12 +125,13 @@ public class US002_RegistrationStepDefinitions {
 
     @Then("user should see mobile phone is not valid error message")
     public void user_should_see_mobile_phone_is_not_valid_error_message() {
-        prlRegistrationPage.MobilePhoneIsNotValidMessage.isDisplayed();
+        Assert.assertTrue(prlRegistrationPage.MobilePhoneIsNotValidMessage.isDisplayed());
+
     }
 
     @Then("user should not see this field is invalid error message")
     public void user_should_not_see_this_field_is_invalid_error_message() {
-
+        Assert.assertFalse(prlRegistrationPage.verifyElementNotDisplayed(prlRegistrationPage.emailIsNotValidMessage));
     }
 
     @Then("user clicks on email text box and provide an invalid email")
@@ -138,8 +140,8 @@ public class US002_RegistrationStepDefinitions {
     }
 
     @Then("user should see this field is invalid error message")
-    public void user_should_see_this_field_is_invalid_error_message() throws InterruptedException {
-        prlRegistrationPage.emailIsNotValidMessage.isDisplayed();
+    public void user_should_see_this_field_is_invalid_error_message() {
+        Assert.assertTrue(prlRegistrationPage.emailIsNotValidMessage.isDisplayed());
     }
 
 
